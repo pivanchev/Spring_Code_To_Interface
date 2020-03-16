@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 5.2.4//EN" "http://www.springframework.org/dtd/spring-beans-5.2.4.dtd">
+
+<beans>
+	<bean id = "triangle" class = "com.pivanchev.Triangle"> 
+		<property name = "pointA" ref = "pointA"/>
+		<property name = "pointB" ref = "pointB"/>
+		<property name = "pointC" ref = "pointC"/>
+			
+	</bean>	
+	
+	<bean id = "pointA" class = "com.pivanchev.Point">
+		<property name = "x" value = "0"/>
+		<property name = "y" value = "0"/>
+	</bean>
+
+	<bean id = "pointB" class = "com.pivanchev.Point">
+			<property name = "x" value = "-20"/>
+			<property name = "y" value = "0"/>
+	</bean>
+	
+	<bean id = "pointC" class = "com.pivanchev.Point">				
+			<property name = "x" value = "10"/>
+			<property name = "y" value = "20"/>
+	</bean>
+	
+	
+	<bean id = "circle" class = "com.pivanchev.Circle"> 
+	<property name = "center" ref = "pointC"/>
+	</bean>	
+	
+	<bean class = "org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
+
+		
+</beans>
