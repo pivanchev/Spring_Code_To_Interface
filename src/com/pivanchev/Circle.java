@@ -1,6 +1,7 @@
 package com.pivanchev;
 
-import org.springframework.beans.factory.annotation.Required;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Circle implements Shape{
 	
@@ -10,7 +11,7 @@ public class Circle implements Shape{
 	public void draw() {
 		
 		System.out.println("Drawing Circle:");
-		System.out.println("Point are: (" + center.getX() + ", " + center.getY() + ").");
+		System.out.println("Points are: (" + center.getX() + ", " + center.getY() + ").");
 		System.out.println();
 		
 	}
@@ -18,7 +19,9 @@ public class Circle implements Shape{
 	public Point getCenter() {
 		return center;
 	}
-	@Required
+	
+	@Autowired
+	@Qualifier("circleRelated")
 	public void setCenter(Point center) {
 		this.center = center;
 	}

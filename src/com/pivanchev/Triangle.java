@@ -1,5 +1,7 @@
 package com.pivanchev;
 
+import org.springframework.beans.factory.annotation.Required;
+
 public class Triangle implements Shape {
 	
 	private Point pointA;
@@ -37,7 +39,7 @@ public class Triangle implements Shape {
 	}
 
 
-
+	@Required
 	public void setPointC(Point pointC) {
 		this.pointC = pointC;
 	}
